@@ -33,20 +33,28 @@ namespace testApp
         static void Main(string[] args)
         {
 
-            //Heap Testing
-            Heap h = new Heap();
-            int[] a = {6,7,3,5,9 };
-            //h.BuildHeap(a, a.Length-1);
-            h.HeapSort(a, a.Length - 1);
+            //Sort testing
+            SortingClass sort = new SortingClass();
+            int[] a = { 6, 7, 3, 5, 19,9,8, 3, 3, 6, 2 };
+            //sort.CountingSort(a); //Counting sort test
+            sort.RadixSort(a);// Radix sort test
+            sort.print();
 
-            foreach (var i in h.H)
-            {
-                Console.WriteLine(i+" ");
-            }
-            
-            
-            
-            
+
+            ////Heap Testing
+            //Heap h = new Heap();
+            //int[] a = {6,7,3,5,9 };
+            ////h.BuildHeap(a, a.Length-1);
+            //h.HeapSort(a, a.Length - 1);
+
+            //foreach (var i in h.H)
+            //{
+            //    Console.WriteLine(i+" ");
+            //}
+
+
+
+
             ////Dynamics Programming testing
             //int[] a = {-1,2,-3,3,-1,9,1,-9,1 };
             //int[] stock = {9,3,1,8,18,3,15 };
